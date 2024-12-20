@@ -2,9 +2,16 @@ from flask import Flask, redirect, request, jsonify, render_template
 import sqlite3
 import os
 
+
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "¡Hola, Flask está funcionando!"
 
+# Solo ejecuta app.run() en desarrollo
+if __name__ == '__main__':
+    app.run(debug=True)
 # Inicializar la base de datos
 def init_db():
     if not os.path.exists("usuarios.db"):
