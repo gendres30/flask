@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "¡Hola, Flask está funcionando!"
+def index():
+    return app.send_static_file('index.html')
 
 # Solo ejecuta app.run() en desarrollo
 if __name__ == '__main__':
@@ -28,9 +28,7 @@ def init_db():
         conn.close()
 
 # Ruta para cargar la página HTML
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
+
 
 # Ruta para guardar datos
 @app.route('/guardar', methods=['POST'])
