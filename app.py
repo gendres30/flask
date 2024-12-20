@@ -8,7 +8,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+from flask import send_file
 
+@app.route('/download-db')
+def download_db():
+    return send_file('usuarios.db', as_attachment=True)
 # Solo ejecuta app.run() en desarrollo
 if __name__ == '__main__':
     app.run(debug=True)
